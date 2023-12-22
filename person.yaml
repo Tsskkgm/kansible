@@ -1,0 +1,10 @@
+- name: Kirankumar  
+  dob: "2022-02-02"
+  address:
+  - address-line1: maruthi nagar
+    address-line2: masjeed st
+    city: vijayawada
+  - address-line1: maruthi nagar
+    address-line2: masjeed st
+    city: vijayawada
+  email: kiran@gmail.com    
