@@ -3,10 +3,10 @@
   vars:
     Name: "Kiran"
     Course: "Devops"
-    Trainer: siva
+    Trainer: "siva"
   tasks:
   - name: check variables
     vars:
       name: "Devops with AWS"
     ansible.builtin.debug:
-     msg: "Hi {{Name}} is learning {{Course}} with {{Trainer}}""
+     msg: "Hi {{Name}} is learning {{Course}} with {{Trainer}}"
