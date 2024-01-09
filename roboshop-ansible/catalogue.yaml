@@ -68,7 +68,7 @@
   #     msg: "product count: {{product_count}}"  
 
   - name: load schema 
-    ansible.builtin.command: mongo --host mongodb.tssdevops.online </app/schema/catalogue.js
+    ansible.builtin.command: mongo --host mongodb.tssdevops.online < /app/schema/catalogue.js
     when: product_count.stdout == "0"
   
 
