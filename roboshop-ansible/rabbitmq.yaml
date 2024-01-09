@@ -8,8 +8,8 @@
   - name: configure yum rabbitmq repos 
     ansible.builtin.shell: curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | bash
 
- - name: install rabbitmq server
-   ansible.builtin.dnf:
+  - name: install rabbitmq server
+    ansible.builtin.dnf:
        name: rabbitmq-server
        state: present
 
