@@ -56,7 +56,9 @@
 
   - name: load schema 
     ansible.builtin.command: mongo --host mongodb.tssdevops.online </app/schema/catalogue.js
-       
+    args:
+      chdir: /app/schema/catalogue.js
+
   - name: restart catalogue
     ansible.builtin.service:
       name: catalogue
