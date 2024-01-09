@@ -1,7 +1,8 @@
 - name: mongodb
   hosts: mongodb
   become: yes
-  - name: copy mongodb repo
+  tasks:
+    - name: copy mongodb repo
     ansible.builtin.copy:
       src: mongodb.repo
       dest: /etc/yum.repos.d/mongo.repo
@@ -28,4 +29,3 @@
       name: mongod
       state: restarted
 
-      
