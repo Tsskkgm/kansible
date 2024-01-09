@@ -17,6 +17,7 @@
       name: mongod
       state: started
       enable: yes
+      daemon-reload: yes
 
   - name: allow remote connections
     ansible.builtin.replace:
