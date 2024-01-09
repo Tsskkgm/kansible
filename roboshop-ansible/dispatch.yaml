@@ -33,7 +33,13 @@
         remote_src: yes
   
   - name: download dependencies and build software
-    ansible.builtin.shell: go mod init dispatch ; go get ; go build
+    ansible.builtin.command: go mod init dispatch
+
+  - name: download dependencies 
+    ansible.builtin.command: go get
+
+  - name: build software
+    ansible.builtin.command: go build
 
   - name: copy dispatch service
     ansible.builtin.copy:
