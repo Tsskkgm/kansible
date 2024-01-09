@@ -4,8 +4,12 @@
   tasks:
   - name: install python 
     ansible.builtin.dnf:
-        name: python36 gcc python3-devel
+        name: "{{item}}"
         state: present
+    loop:
+    - python36 
+    - gcc 
+    - python3-devel
 
   - name: create roboshop user
     ansible.builtin.user: 
@@ -52,7 +56,7 @@
       state: started
       enabled: yes
    
-   
+
 
 
   
