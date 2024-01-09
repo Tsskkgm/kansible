@@ -9,7 +9,7 @@
 
   - name: create roboshop user
     ansible.buildin.file:
-       name: roboshop  
+        name: roboshop  
 
   - name: Recusively remove app directory
     ansible.builtin.file:
@@ -70,7 +70,7 @@
         name: shipping 
         state: restarted
         enabled: yes
-        
+
   
 
 
